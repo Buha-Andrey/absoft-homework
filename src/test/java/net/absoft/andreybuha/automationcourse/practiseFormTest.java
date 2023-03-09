@@ -32,7 +32,8 @@ public class practiseFormTest {
     @Test
     public void fillTheForm(){
         WebElement moveToCheckboxes = driver.findElement(By.id("state"));
-        WebElement moveToSubmit = driver.findElement(By.xpath("//div[@class = 'accordion']/div[5]"));
+        WebElement moveToSubmit = driver.
+                findElement(By.xpath("//li[@id='item-8']/span[contains(text(), 'Select Menu')]"));
         WebElement selectDropdown = driver.findElement(By.id("state"));
         WebElement selectCity = driver.findElement(By.id("city"));
 
@@ -42,7 +43,8 @@ public class practiseFormTest {
         driver.findElement(By.id("lastName")).sendKeys("RingCentral-test");
         driver.findElement(By.id("userEmail")).sendKeys("gwtest@test.com");
         driver.findElement(By.xpath("//form//input[@id='gender-radio-1']/../label")).click();
-        driver.findElement(By.xpath("//form//input[@id='userNumber']")).sendKeys("1234567890");
+        driver.findElement(By.xpath("//form//input[@id='userNumber']")).
+                sendKeys("1234567890");
     /*
            WebElement birthField = driver.findElement(By.id("dateOfBirthInput"));
            birthField.clear();
@@ -52,10 +54,11 @@ public class practiseFormTest {
         driver.findElement(By.id("subjectsInput")).sendKeys(Keys.RETURN);
         new Actions(driver).moveToElement(moveToCheckboxes).perform();
         driver.findElement(By.xpath("//label[@for = 'hobbies-checkbox-1']")).click();
-        driver.findElement(By.id("uploadPicture")).sendKeys("/Users/andrey.buha/Desktop/Screenshot 2023-02-07 at 10.55.46.png");
+        driver.findElement(By.id("uploadPicture")).
+                sendKeys("/Users/andrey.buha/Desktop/Screenshot 2023-02-07 at 10.55.46.png");
         driver.findElement(By.id("currentAddress")).sendKeys("Odesa, Ukraine");
-        driver.findElement(By.xpath("//div[@class = 'accordion']/div[4]")).click(); //need to get access to field with dropdown
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.findElement(By.xpath("//div[contains(text(), 'Widgets')]")).
+                click(); //need to get access to field with dropdown
         new Actions(driver).moveToElement(moveToSubmit).perform();
 
         new Actions(driver).click(selectDropdown).sendKeys(Keys.RETURN).perform();
