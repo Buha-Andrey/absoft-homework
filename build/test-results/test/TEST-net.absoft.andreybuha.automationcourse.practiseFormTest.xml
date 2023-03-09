@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="net.absoft.andreybuha.automationcourse.practiseFormTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-09T11:54:28" hostname="NB377" time="11.118">
+  <properties/>
+  <testcase name="fillTheForm" classname="net.absoft.andreybuha.automationcourse.practiseFormTest" time="11.118"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 29980
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1678362860.532][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+]]></system-err>
+</testsuite>
