@@ -38,7 +38,7 @@ public class practiseSliderTest {
         int xOffset = (width*(valueForCalc))/100;
         if (usersPresentOfSlider > 75 || usersPresentOfSlider < 36) {
             xOffset = xOffset - xOffset/40;
-        } // i dont know why, but 1-35 and 76-100 need to add some increment for width value
+        } // i dont know why, but 1-35 and 76-100 sliderPercent and inputPercent always differs on 1 Percent. so I decide to add some increment for width value
         new Actions(driver).dragAndDropBy(slider, xOffset,0 ).perform();
 
 
