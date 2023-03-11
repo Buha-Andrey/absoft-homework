@@ -1,5 +1,6 @@
 package net.absoft.andreybuha.automationcourse;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +25,8 @@ public class practiseFormTest {
     private WebDriver driver;
     @BeforeMethod
     private void setUp(){
-        ChromeOptions options = new ChromeOptions().addArguments("--window-size=1920,1080");
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions().addArguments("--window-size=1920,1080", "--remote-allow-origins=*");
         driver = new ChromeDriver(options);
         driver.get("https://demoqa.com/automation-practice-form");
 
