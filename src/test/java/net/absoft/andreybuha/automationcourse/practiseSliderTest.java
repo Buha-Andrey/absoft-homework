@@ -28,10 +28,9 @@ public class practiseSliderTest {
 
     @Test
     public void testSlider() {
-        WebElement sliderDot = driver.findElement(By.xpath("//span/div[@style = 'left: calc(25% + 5px);']"));
         WebElement slider = driver.findElement(By.xpath("//span/input"));
 
-        int usersPresentOfSlider = 1; // Users' percent of slider. Please enter 0-100
+        int usersPresentOfSlider = 40; // Users' percent of slider. Please enter 0-100
         int valueForCalc = usersPresentOfSlider - 50;
 
         int width=slider.getSize().getWidth();
